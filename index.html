@@ -64,17 +64,31 @@
         <a href="#" class="text-2xl font-bold text-white tracking-wider"
           >Yusuf's Porto</a
         >
+        <!-- Desktop Menu -->
         <ul class="hidden md:flex items-center space-x-8">
-          <li><a href="#home" class="nav-link font-medium">Home</a></li>
-          <li><a href="#about" class="nav-link font-medium">About</a></li>
           <li>
-            <a href="#projects" class="nav-link font-medium">My Projects</a>
+            <a href="#home" class="nav-link text-xs font-medium">Home</a>
           </li>
-          <li><a href="#skills" class="nav-link font-medium">Skills</a></li>
-          <li><a href="#contact" class="nav-link font-medium">Contact</a></li>
+          <li>
+            <a href="#about" class="nav-link text-xs font-medium">About</a>
+          </li>
+          <li>
+            <a href="#projects" class="nav-link text-xs font-medium"
+              >My Projects</a
+            >
+          </li>
+          <li>
+            <a href="#skills" class="nav-link text-xs font-medium">Skills</a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-link text-xs font-medium">Contact</a>
+          </li>
         </ul>
-        <!-- Mobile Menu Button (placeholder) -->
-        <button class="md:hidden text-white">
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-white focus:outline-none"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
@@ -91,6 +105,49 @@
           </svg>
         </button>
       </nav>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden absolute w-full bg-gray-900/90 backdrop-blur-sm"
+      >
+        <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <li>
+            <a
+              href="#home"
+              class="block text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="block text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="block text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+              >My Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="block text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="block text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
     </header>
 
     <!-- 2. BADAN / ISI -->
@@ -213,61 +270,91 @@
         <h2 class="section-title text-3xl font-bold text-center mb-12">
           Skills
         </h2>
-        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-12 place-items-center"
+        >
           <!-- HTML -->
           <div
-            class="flex flex-col items-center p-4 transition-transform hover:-translate-y-2"
+            class="flex flex-col items-center text-center p-4 transition-transform hover:-translate-y-2"
           >
-            <img src="image/html-5.png" alt="HTML Icon" class="w-16 h-16" />
-            <span class="mt-2 font-semibold">HTML5</span>
+            <div class="w-16 h-16 flex items-center justify-center mb-2">
+              <img
+                src="image/html-5.png"
+                alt="HTML Icon"
+                class="max-h-full object-contain"
+              />
+            </div>
+            <span class="font-semibold">HTML5</span>
           </div>
 
           <!-- CSS -->
           <div
-            class="flex flex-col items-center p-4 transition-transform hover:-translate-y-2"
+            class="flex flex-col items-center text-center p-4 transition-transform hover:-translate-y-2"
           >
-            <img src="image/css-3.png" alt="CSS Icon" class="w-16 h-16" />
-            <span class="mt-2 font-semibold">CSS3</span>
+            <div class="w-16 h-16 flex items-center justify-center mb-2">
+              <img
+                src="image/css-3.png"
+                alt="CSS Icon"
+                class="max-h-full object-contain"
+              />
+            </div>
+            <span class="font-semibold">CSS</span>
           </div>
 
           <!-- Javascript -->
           <div
-            class="flex flex-col items-center p-4 transition-transform hover:-translate-y-2"
+            class="flex flex-col items-center text-center p-4 transition-transform hover:-translate-y-2"
           >
-            <img src="image/JS.png" alt="Javascript Icon" class="w-16 h-16" />
-            <span class="mt-2 font-semibold">Javascript</span>
+            <div class="w-16 h-16 flex items-center justify-center mb-2">
+              <img
+                src="image/JS.png"
+                alt="Javascript Icon"
+                class="max-h-full object-contain"
+              />
+            </div>
+            <span class="font-semibold">Javascript</span>
           </div>
 
           <!-- Tailwind CSS -->
           <div
-            class="flex flex-col items-center p-4 transition-transform hover:-translate-y-2"
+            class="flex flex-col items-center text-center p-4 transition-transform hover:-translate-y-2"
           >
-            <img
-              src="image/tailwind.png"
-              alt="Tailwind CSS Icon"
-              class="w-16 h-16"
-            />
-            <span class="mt-2 font-semibold">Tailwind CSS</span>
+            <div class="w-16 h-16 flex items-center justify-center mb-2">
+              <img
+                src="image/tailwind.png"
+                alt="Tailwind CSS Icon"
+                class="max-h-full object-contain"
+              />
+            </div>
+            <span class="font-semibold">Tailwind</span>
           </div>
 
           <!-- React JS -->
           <div
-            class="flex flex-col items-center p-4 transition-transform hover:-translate-y-2"
+            class="flex flex-col items-center text-center p-4 transition-transform hover:-translate-y-2"
           >
-            <img
-              src="image/react-js.png"
-              alt="React-JS Icon"
-              class="w-16 h-16"
-            />
-            <span class="mt-2 font-semibold">React JS</span>
+            <div class="w-16 h-16 flex items-center justify-center mb-2">
+              <img
+                src="image/react-js.png"
+                alt="React Icon"
+                class="max-h-full object-contain"
+              />
+            </div>
+            <span class="font-semibold">React JS</span>
           </div>
 
-          <!-- GIT -->
+          <!-- GitHub -->
           <div
-            class="flex flex-col items-center p-4 transition-transform hover:-translate-y-2"
+            class="flex flex-col items-center text-center p-4 transition-transform hover:-translate-y-2"
           >
-            <img src="image/github.png" alt="GitHub Icon" class="w-16 h-16" />
-            <span class="mt-2 font-semibold">GIT</span>
+            <div class="w-16 h-16 flex items-center justify-center mb-2">
+              <img
+                src="image/github.png"
+                alt="GitHub Icon"
+                class="max-h-full object-contain"
+              />
+            </div>
+            <span class="font-semibold">GitHub</span>
           </div>
         </div>
       </section>
@@ -313,5 +400,22 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const navLinks = mobileMenu.querySelectorAll("a");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Menutup menu saat link di-klik (untuk navigasi yang mulus)
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+    </script>
   </body>
 </html>
